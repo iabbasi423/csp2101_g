@@ -46,7 +46,7 @@ while ( true ) do
 #if Player guess matches, echo following statement and add 10 to TotalPoint variable
             if [ "$PlayerInput" -eq "$rand_num" ]; then
                 echo -e "Weldone, your guess is right. You earned 10 points\n"
-                TotalPoint += 10
+                TotalPoint+=10
 #sleep for 1 second
                 sleep 1s
 #If player guess is greater, echo following statement
