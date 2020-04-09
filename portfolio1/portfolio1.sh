@@ -29,8 +29,6 @@ VarCheck='^[0-9]+$'
 TotalPoint=0;
 #start a unconditional while loop
 while ( true ) do
-#clear screen every time loop start
-#clear 
 #Taske user input
     read -p "Please guess age: " PlayerInput
     echo  -e "\n\n"
@@ -43,11 +41,7 @@ while ( true ) do
         if ! [[ "$PlayerInput" =~ $VarCheck ]]; then
             echo -e "Please enter numbers only\n"
         else 
-#if input is number, use RANDOM function to generate number andd seed with PID of current instance.
-            #RANDOM=$$
-#Find remander of RANDOM variable/50 and add 30 to it, assign to Age variable.
-#Note 50 is difference between 30 and 80, 30 is minumum age number
-            #Age=$(( (( $RANDOM % 50 )) + 30 ))
+#if input is number, use RANDOM function to generate number between 30 and 80
             gen_rand 30 80
 #if Player guess matches, echo following statement and add 10 to TotalPoint variable
             if [ "$PlayerInput" -eq "$rand_num" ]; then
